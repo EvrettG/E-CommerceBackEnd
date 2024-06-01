@@ -44,7 +44,7 @@ if (dbResponse){
       res.status(404).json({message: "Product not found"})
     }
   } catch (error) {
-    
+    res.status(500).json({message: `Unexpected error ocoured: ${err}`});
   }
 });
 
