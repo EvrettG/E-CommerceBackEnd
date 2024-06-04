@@ -2,6 +2,9 @@
   
 ![License: GPL v3](https://img.shields.io/badge/License-MIT-blue.svg)
 
+## Link to Video
+- [Video](https://app.screencastify.com/v3/watch/A72b1uG69KMdsEfq6WUk)
+
 ## Table of contents
 - [Description](#description)
 - [Instalation instructions](#instalation-instructions)
