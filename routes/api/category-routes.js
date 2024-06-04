@@ -40,6 +40,11 @@ router.post('/', async (req, res) => {
     "category_name": "Sport equipment",
   }
   */
+  // Validate the request body
+  if (!req.body.category_name) {
+    return res.status(400).json({ message: 'category_name is required' });
+  }
+
   try {
     const dbResponse = await Category.create(req.body);
     res.status(200).json(dbResponse);
@@ -51,6 +56,10 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
+    // Validate the request body
+    if (!req.body.category_name) {
+      return res.status(400).json({ message: 'category_name is required' });
+    }
   try {
     const dbResponse = await Category.update(req.body, {
       where: {

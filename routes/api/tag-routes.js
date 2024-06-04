@@ -41,6 +41,9 @@ router.post('/', async (req, res) => {
   "productIds": [1, 3, 5]
   }
   */
+  if(!req.body.tag_name){
+    return res.status(400).json({ message: 'Invalid body/request sent ' });
+   }
   try {
     const tag = await Tag.create(req.body);
     if (req.body.productIds && req.body.productIds.length) {
